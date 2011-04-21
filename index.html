@@ -50,11 +50,32 @@
     </div>
 
     <h2>Dependencies</h2>
-<p>Jquery</p>
+<p>jQuery</p>
+
+    <h2>Usage</h2>
+
+    Include jQuery and jenkins.js.
+
+    <pre>
+&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://af83.github.com/jenkins-status/jenkins.js"&gt;&lt;/script&gt;
+// show job status
+new JenkinsState({project: "jenkins_main_trunk", host: "ci.jenkins-ci.org"});
+// show view status
+new JenkinsViewState({view: "Infrastructure", host: "ci.jenkins-ci.org"});
+    </pre>
+
+
+
+    <h2>Example</h2>
+
+    <p>Look at the bottom left of this webpage !</p>
+
 <h2>License</h2>
 <p>MIT</p>
 <h2>Authors</h2>
 <p>af83</p>
+
 
 
     <h2>Download</h2>
@@ -74,6 +95,11 @@
 
   </div>
 
-  
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script type="text/javascript" src="jenkins.js"></script>
+  <script type="text/javascript">
+      new JenkinsState({project: "jenkins_main_trunk", host: "ci.jenkins-ci.org"});
+  </script>
 </body>
 </html>
