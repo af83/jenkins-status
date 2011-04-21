@@ -1,0 +1,12 @@
+<html>
+<body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="jenkins.js"></script>
+<script type="text/javascript">
+// wanna watch a jenkins project ?
+new JenkinsState({project: "jenkins_main_trunk", host: "ci.jenkins-ci.org"});
+// wanna watch a jenkins view ?
+new JenkinsViewState({view: "Infrastructure", host: "ci.jenkins-ci.org"});
+</script>
+</body>
+</html>

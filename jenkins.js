@@ -39,4 +39,24 @@
     // ask the state to jenkins.
     query();
   }
+
+ /**
+  * Use to watch a view state on jenkins
+  */
+  win.JenkinsViewState = function(options) {
+    $.ajax({
+      url: "http://" + options.host + "/view//" + options.view + "/api/json",
+      dataType: "jsonp",
+      jsonp: 'jsonp',
+      success: function(data) {
+        $(data.jobs).each(function(i, job) {
+          new JenkinsState({
+            project: job.name,
+            host: options.host
+          });
+        });
+      }
+    })
+  }
+
 })(window, jQuery);
